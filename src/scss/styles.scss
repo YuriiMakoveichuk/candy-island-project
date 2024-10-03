@@ -8,7 +8,13 @@
   font-weight: 400;
 
   color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  background: linear-gradient(
+    0deg,
+    #d2ffb1 0%,
+    #c2fffd 33.5%,
+    #ffc6e6 64%,
+    #c2fffd 100%
+  );
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
