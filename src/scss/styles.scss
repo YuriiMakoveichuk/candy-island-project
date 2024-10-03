@@ -1,4 +1,5 @@
 @import './header.scss';
+@import './hero.scss';
 
 :root {
   font-family: Fredoka, Pixelify, sans-serif;
@@ -7,13 +8,18 @@
   // font-weight: 400;
 
   // color: #242424;
-  background: linear-gradient(
-    0deg,
-    #d2ffb1 0%,
-    #c2fffd 33.5%,
-    #ffc6e6 64%,
-    #c2fffd 100%
-  );
+  body {
+    height: 100vh;
+    background: linear-gradient(
+      to top,
+      #d2ffb1 0%,
+      #c2fffd 35%,
+      #ffc6e6 65%,
+      #c2fffd 100%
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
   // font-synthesis: none;
   // text-rendering: optimizeLegibility;
