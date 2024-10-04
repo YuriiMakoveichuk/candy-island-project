@@ -1,29 +1,35 @@
 @import './header.scss';
 @import './hero.scss';
+@import './footer.scss';
 
 :root {
-  font-family: Fredoka, Pixelify, sans-serif;
-  // font-size: 16px;
-  // line-height: 24px;
-  // font-weight: 400;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #290c44;
 
-  // color: #242424;
+  height: 100vh;
+  background: linear-gradient(
+    to top,
+    #d2ffb1 0%,
+    #c2fffd 35%,
+    #ffc6e6 65%,
+    #c2fffd 100%
+  );
+
   body {
-    height: 100vh;
-    background: linear-gradient(
-      to top,
-      #d2ffb1 0%,
-      #c2fffd 35%,
-      #ffc6e6 65%,
-      #c2fffd 100%
-    );
     background-repeat: no-repeat;
     background-size: cover;
   }
+}
+.container {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0 16px;
 
-  // font-synthesis: none;
-  // text-rendering: optimizeLegibility;
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
-  // -webkit-text-size-adjust: 100%;
+  @include media(desktop) {
+    max-width: 1200px;
+    padding: 0 24px;
+  }
 }
