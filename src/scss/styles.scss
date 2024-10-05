@@ -3,14 +3,10 @@
 @import url('./footer.scss');
 @import url('./advantages.scss');
 @import url('./benefits.scss');
-
-@import url('./terms-of-us.scss');
-
 @import url('./reviews.scss');
+@import url('./about-us.scss');
+@import url('./terms-of-us.scss');
 @import url('./privacy-policy.scss');
-
-
-
 
 :root {
   font-family: 'Fredoka', sans-serif;
@@ -21,7 +17,7 @@
 
   height: 100vh;
   background: linear-gradient(
-    to top,
+    180deg,
     #d2ffb1 0%,
     #c2fffd 35%,
     #ffc6e6 65%,

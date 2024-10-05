@@ -7,6 +7,10 @@
   font-weight: 600;
   font-size: 20px;
   text-transform: capitalize;
+  @include media(desktop) {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
 }
 
 .swiper-reviews {
@@ -48,4 +52,7 @@
 
 .reviews-text {
   font-size: 12px;
+  @include media(desktop) {
+    font-size: 16px;
+  }
 }
