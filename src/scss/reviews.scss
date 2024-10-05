@@ -1,5 +1,8 @@
 .reviews-section {
   padding: 56px 0 0;
+  @include media(desktop) {
+    padding: 96px 0;
+  }
 }
 
 .reviews-title {
@@ -13,20 +16,19 @@
   }
 }
 
-.swiper-reviews {
-  width: 100%;
-  height: 100%;
-  display: flex;
-}
-
 .slide-reviews {
-  width: 240px !important;
+  box-sizing: border-box;
+  width: 288px !important;
+  height: 206px !important;
   box-shadow: inset 0 1px 8px 0 rgba(0, 0, 0, 0.25);
   background: #fff9cd;
   border-radius: 16px;
   padding: 32px 24px;
+  margin-right: 1px;
+  margin-left: 1px;
   @include media(desktop) {
     width: 516px !important;
+    height: 200px !important;
     margin-right: 6px;
     margin-left: 6px;
   }

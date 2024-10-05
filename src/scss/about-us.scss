@@ -1,5 +1,8 @@
 .about-us-section {
   padding: 56px 0 0;
+  @include media(desktop) {
+    padding: 96px 0;
+  }
 }
 
 .about-us-title {
