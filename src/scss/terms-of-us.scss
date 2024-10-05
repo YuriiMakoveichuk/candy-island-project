@@ -65,3 +65,10 @@
     margin-bottom: 16px;
   }
 }
+
+.terms-section p {
+  font-size: 12px;
+  @include media(desktop) {
+    font-size: 16px;
+  }
+}
