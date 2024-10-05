@@ -4,10 +4,6 @@
 }
 
 .nav-list-footer {
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // gap: 40px;
   margin-bottom: 32px;
 
   @include media(desktop) {
@@ -37,7 +33,13 @@
 
 .nav-link-footer {
   font-size: 12px;
+  transition: color 250ms linear;
   @include media(desktop) {
     font-size: 14px;
   }
+}
+
+.nav-link-footer:hover,
+.nav-link-footer:focus {
+  color: #f15d99;
 }
