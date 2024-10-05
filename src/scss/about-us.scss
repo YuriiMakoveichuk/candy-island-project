@@ -1,0 +1,52 @@
+.about-us-section {
+  padding: 56px 0 0;
+}
+
+.about-us-title {
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: capitalize;
+  @include media(desktop) {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+}
+
+.about-us-container {
+  background-image: url(/public/img/about-us-img/Puzzles_Mobile.png);
+  background-repeat: no-repeat;
+  @include media(desktop) {
+    background-image: url(/public/img/about-us-img/Puzzles_Desk.png);
+    display: flex;
+  }
+}
+
+.about-us-box {
+  margin-bottom: 126px;
+  @include media(desktop) {
+    margin-bottom: 0;
+    margin-right: 88px;
+  }
+}
+
+.about-us-text {
+  font-size: 12px;
+  @include media(desktop) {
+    font-size: 16px;
+    width: 468px;
+  }
+}
+
+// @media only screen and (min-width: 1200px) and (min-resolution: 192dpi),
+//   only screen and (min-width: 1200px) and (min-device-pixel-ratio: 2) {
+//   .about-us-container {
+//     background-image: url(/public/img/about-us-img/Puzzles_Desk@2x.png);
+//   }
+// }
+
+// @media only screen and (max-width: 768px) and (min-resolution: 192dpi) {
+//   .about-us-container {
+//     background-image: url(/public/img/about-us-img/Puzzles_Mobile@2x.png);
+//   }
+// }
