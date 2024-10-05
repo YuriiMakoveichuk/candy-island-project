@@ -1,13 +1,6 @@
 .advantages {
   display: flex;
   flex-direction: column;
-  // background: linear-gradient(
-  //   0deg,
-  //   #d2ffb1 0%,
-  //   #c2fffd 35%,
-  //   #ffc6e6 65%,
-  //   #c2fffd 100%
-  // );
   padding: 67px 0;
 }
 
@@ -53,11 +46,42 @@
 }
 
 .iconContainer {
-  /* Место для стилизации контейнера иконки */
+  position: relative;
 }
 
 .icon {
-  /* Место для стилизации иконки */
+  position: absolute;
+  right: 0;
+  width: auto;
+  height: auto;
+}
+
+.advantage-item:nth-child(1) .icon {
+  transform: translate(50px, -70px);
+}
+
+.advantage-item:nth-child(2) .icon {
+  transform: translate(-2px, -79px);
+}
+
+.advantage-item:nth-child(3) .icon {
+  transform: translate(-2px, -49px);
+}
+
+.advantage-item:nth-child(4) .icon {
+  transform: translate(38px, -69px);
+}
+
+.advantage-item:nth-child(5) .icon {
+  transform: translate(1px, -69px);
+}
+
+.advantage-item:nth-child(6) .icon {
+  transform: translate(3px, -37px);
+}
+
+.advantage-item:nth-child(7) .icon {
+  transform: translate(15px, -70px);
 }
 
 .text-content {
