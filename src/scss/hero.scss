@@ -114,6 +114,7 @@
 .hero-button {
   display: inline-block;
   margin-top: 8px;
+  transition: all 0.9s ease-in-out;
 
   @include media(desktop) {
     margin-top: 16px;
@@ -132,7 +133,7 @@
 
 .hero-button:hover {
   content: url('/public/img/hero-img/mainButtonHover.png');
-  transition: all 3s ease-in-out;
+  transition: all 1.5s ease-in-out;
   width: 144px;
   height: auto;
 
