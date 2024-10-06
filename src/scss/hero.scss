@@ -42,29 +42,38 @@
     gap: 24px;
   }
 }
-
-.hero-title {
+.hero-title-outline {
   font-family: 'Fredoka', sans-serif;
   font-weight: 700;
   font-size: 40px;
-  -webkit-text-stroke-width: 1px;
+  position: absolute;
+  z-index: 1;
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #000;
+  text-align: center;
+
+  @include media(desktop) {
+    font-size: 96px;
+    -webkit-text-stroke-width: 4px;
+  }
+}
+
+.hero-title-fill {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  position: relative;
+  z-index: 2;
   background: url('/public/img/hero-img/backgrounTitle.png') lightgray 50% /
     cover no-repeat;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  line-height: 150%;
-  display: inline-block;
-  transition: all 0.3s ease-in-out;
-  max-width: 100%;
 
   @include media(desktop) {
     font-size: 96px;
-    -webkit-text-stroke-width: 2px;
-    line-height: 1.5;
-    max-width: none;
   }
 }
 
