@@ -1,0 +1,25 @@
+.gallery-section {
+  padding: 56px 0 0;
+  @include media(desktop) {
+    padding: 96px 0 112px;
+  }
+}
+
+.gallery-title {
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: capitalize;
+  @include media(desktop) {
+    font-size: 36px;
+    margin-bottom: 56px;
+  }
+}
+
+.gallery-slide {
+  width: 136px !important;
+  @include media(desktop) {
+    width: 306px !important;
+    height: 542px !important;
+  }
+}
