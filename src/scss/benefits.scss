@@ -1,11 +1,4 @@
 .features {
-  // background: linear-gradient(
-  //   180deg,
-  //   #d2ffb1 0%,
-  //   #c2fffd 33.5%,
-  //   #ffc6e6 64%,
-  //   #c2fffd 100%
-  // );
   padding: 50px 0;
   display: flex;
   flex-direction: column;
@@ -28,10 +21,11 @@
 .features__grid {
   display: flex;
   gap: 56px;
+  white-space: nowrap;
 }
 
 .feature {
-  display: flex;
+  display: inline-block;
   width: 246px;
   height: 164px;
   padding: 24px;
@@ -42,6 +36,16 @@
   border-radius: 16px;
   background: var(--Card-Background_Pink, #fddeff);
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+  animation: scroll 5s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .feature__icon-wrapper {
