@@ -41,6 +41,11 @@
   @include media(desktop) {
     gap: 24px;
   }
+
+  &:hover .hero-title-outline,
+  &:hover .hero-title-fill {
+    animation: shake 0.5s;
+  }
 }
 .hero-title-outline {
   font-family: 'Fredoka', sans-serif;
