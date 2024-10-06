@@ -70,7 +70,7 @@
 
 .burger-btn,
 .close-btn {
-  display: block;
+  // display: block;
 
   @include media(desktop) {
     display: none;
