@@ -1,26 +1,29 @@
 .features {
-  padding: 50px 0;
+  padding: 24px 0 0;
   display: flex;
   flex-direction: column;
-}
-
-.features__header {
-  margin-bottom: 77px;
-  padding-top: 96px;
+  @include media(desktop) {
+    padding: 48px 0;
+  }
 }
 
 .features__title {
-  color: $_header_text_color;
-  font-size: 36px;
-  font-style: normal;
+  margin-bottom: 40px;
   font-weight: 600;
+  font-size: 20px;
+  color: $_header_text_color;
+  font-style: normal;
   line-height: normal;
   text-transform: capitalize;
+  @include media(desktop) {
+    font-size: 36px;
+    margin-bottom: 56px;
+  }
 }
 
 .features__grid {
   display: flex;
-  gap: 56px;
+  gap: 48px;
   white-space: nowrap;
 }
 
@@ -41,10 +44,10 @@
 
 @keyframes scroll {
   0% {
-    transform: translateX(100%);
+    transform: translateX(20%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-20%);
   }
 }
 

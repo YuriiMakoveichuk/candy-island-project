@@ -3,8 +3,10 @@
   width: 100%;
   height: auto;
   background-color: $_header_accent_color;
-  position: sticky;
+  position: fixed;
+  z-index: 999;
   top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
