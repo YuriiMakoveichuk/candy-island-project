@@ -1,26 +1,26 @@
 .features {
-  padding: 50px 0;
+  padding: 24px 0 0;
   display: flex;
   flex-direction: column;
-}
 
-.features__header {
-  margin-bottom: 47px;
-  padding-top: 96px;
   @include media(desktop) {
-    margin-bottom: 77px;
+    padding: 120px 0 0;
   }
 }
 
 .features__title {
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 20px;
   color: $_header_text_color;
   font-size: 20px;
+
   font-style: normal;
-  font-weight: 600;
   line-height: normal;
   text-transform: capitalize;
   @include media(desktop) {
     font-size: 36px;
+    margin-bottom: 64px;
   }
 }
 
@@ -55,10 +55,10 @@
 
 @keyframes scroll {
   0% {
-    transform: translateX(100%);
+    transform: translateX(20%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-20%);
   }
 }
 
