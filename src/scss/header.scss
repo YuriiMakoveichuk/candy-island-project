@@ -72,7 +72,67 @@
 
 .burger-btn,
 .close-btn {
+  // display: block;
+
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.mobile-content {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, #d2ffb1 0%, #ffc6e6 65%);
+  z-index: 9999;
+  padding: 32px;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(100%);
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  .navLinkMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .link {
+    font-size: 24px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: $_header_text_color;
+    text-decoration: none;
+
+    &:hover {
+      color: $_hover_text_color;
+    }
+  }
+}
+
+.burger-btn {
   display: block;
+  z-index: 10000;
+}
+
+// .icon-burger {
+//   fill: $_main_color;
+// }
+
+.close-btn {
+  display: none;
+  z-index: 10000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
 
   @include media(desktop) {
     display: none;

@@ -2,6 +2,7 @@
   padding: 24px 0 0;
   display: flex;
   flex-direction: column;
+
   @include media(desktop) {
     padding: 120px 0 0;
   }
@@ -12,6 +13,8 @@
   font-weight: 600;
   font-size: 20px;
   color: $_header_text_color;
+  font-size: 20px;
+
   font-style: normal;
   line-height: normal;
   text-transform: capitalize;
@@ -25,12 +28,15 @@
   display: flex;
   gap: 48px;
   white-space: nowrap;
+  @include media(desktop) {
+    gap: 56px;
+  }
 }
 
 .feature {
   display: inline-block;
-  width: 246px;
-  height: 164px;
+  width: 167px;
+  height: 161px;
   padding: 24px;
   flex-direction: column;
   align-items: flex-start;
@@ -40,6 +46,11 @@
   background: var(--Card-Background_Pink, #fddeff);
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
   animation: scroll 5s linear infinite;
+
+  @include media(desktop) {
+    width: 246px;
+    height: 164px;
+  }
 }
 
 @keyframes scroll {
@@ -62,16 +73,22 @@
 
 .feature__text h3 {
   color: $_header_text_color;
-  font-size: 24px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  @include media(desktop) {
+    font-size: 24px;
+  }
 }
 
 .feature__text p {
   color: $_header_text_color;
-  font-size: 16px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  @include media(desktop) {
+    font-size: 16px;
+  }
 }

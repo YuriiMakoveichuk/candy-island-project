@@ -19,12 +19,17 @@
 }
 
 .itemsContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto auto auto;
-  width: 1056px;
-  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
   margin: 0 auto;
+  @include media(desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    width: 1056px;
+    gap: 24px;
+  }
 }
 
 .advantage-item:nth-child(2n + 1) {
@@ -32,7 +37,10 @@
 }
 
 .advantage-item:nth-child(2n) {
-  margin-top: 240px;
+  margin-top: 0;
+  @include media(desktop) {
+    margin-top: 240px;
+  }
 }
 
 .advantage-item {
@@ -42,9 +50,14 @@
   padding: 24px;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
 
-  width: 516px;
-  height: 208px;
+  width: 288px;
+  height: auto;
   background: var(--Card-Background_Yellow, #fff9cd);
+
+  @include media(desktop) {
+    width: 516px;
+    height: 208px;
+  }
 }
 
 .iconContainer {
@@ -59,60 +72,111 @@
 }
 
 .advantage-item:nth-child(1) .icon {
-  transform: translate(50px, -70px);
-}
+  content: url('/public/img/advantages-img/Vibrant Graphics_VectorMob.png');
+  transform: translate(20px, -10px);
 
+  @include media(desktop) {
+    content: url('/public/img/advantages-img/Vibrant\ Graphics_Vector.png');
+    transform: translate(50px, -70px);
+  }
+}
 .advantage-item:nth-child(2) .icon {
-  transform: translate(-2px, -79px);
+  content: url('/public/img/advantages-img/Variety\ of\ Levels_VectorMob.png');
+  transform: translate(10px, -22px);
+  @include media(desktop) {
+    content: url('/public/img/advantages-img/Variety\ of\ Levels_Vector.png');
+    transform: translate(-2px, -79px);
+  }
 }
 
 .advantage-item:nth-child(3) .icon {
-  transform: translate(-2px, -49px);
+  content: url('/public/img/advantages-img/Strategic\ Boosters_VectorMob.png');
+  transform: translate(8px, -12px);
+  @include media(desktop) {
+    content: url('/public/img/advantages-img/Strategic\ Boosters_Vector.png');
+    transform: translate(-2px, -49px);
+  }
 }
 
 .advantage-item:nth-child(4) .icon {
-  transform: translate(38px, -69px);
+  content: url('/public/img/advantages-img/Engaging\ Gameplay_VectorMob.png');
+  transform: translate(24px, -12px);
+  @include media(desktop) {
+    content: url('/public/img/advantages-img/Engaging\ Gameplay_Vector.png');
+    transform: translate(38px, -69px);
+  }
 }
 
 .advantage-item:nth-child(5) .icon {
-  transform: translate(1px, -69px);
+  content: url('/public/img/advantages-img/Offline\ Play_VectorMob.png');
+  transform: translate(14px, -34px);
+  @include media(desktop) {
+    content: url('/public/img/advantages-img/Offline\ Play_Vector.png');
+    transform: translate(1px, -69px);
+  }
 }
 
 .advantage-item:nth-child(6) .icon {
-  transform: translate(3px, -37px);
+  content: url('/public/img/advantages-img/Seasonal\ Updates_VectorMob.png');
+  transform: translate(18px, -14px);
+  @include media(desktop) {
+    content: url('/public/img/advantages-img/Seasonal\ Updates_Vector.png');
+    transform: translate(3px, -37px);
+  }
 }
 
 .advantage-item:nth-child(7) .icon {
-  transform: translate(15px, -70px);
+  content: url('/public/img/advantages-img/Vibrant\ Graphics_PuzzleMob.png');
+  transform: translate(14px, -18px);
+  @include media(desktop) {
+    content: url('/public/img/advantages-img/Adaptive\ Difficulty_Vector.png');
+    transform: translate(15px, -70px);
+  }
 }
 
 .text-content {
   display: flex;
   flex-direction: column;
-  gap: 90px;
+  gap: 48px;
+  @include media(desktop) {
+    gap: 90px;
+  }
 }
 
 .advantage-item:nth-child(2) .text-content,
 .advantage-item:nth-child(6) .text-content {
-  gap: 112px;
+  gap: 48px;
+  @include media(desktop) {
+    gap: 112px;
+  }
 }
 
 .text-content h3 {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 500;
   color: $_header_text_color;
+  @include media(desktop) {
+    font-size: 24px;
+  }
 }
 
 .number {
   color: $_hover_text_color;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
-  margin-right: 32px;
+  margin-right: 16px;
+  @include media(desktop) {
+    font-size: 20px;
+    margin-right: 32px;
+  }
 }
 
 .text-content p {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 150%;
   color: var(--header-text-color);
+  @include media(desktop) {
+    font-size: 16px;
+  }
 }
