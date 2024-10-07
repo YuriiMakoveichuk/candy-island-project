@@ -4,7 +4,7 @@
   flex-direction: column;
 
   @include media(desktop) {
-    padding: 120px 0 0;
+    padding: 190px 0 0;
   }
 }
 
@@ -23,11 +23,13 @@
     margin-bottom: 64px;
   }
 }
-
-.features__grid {
+.featuresGrid {
   display: flex;
   gap: 48px;
   white-space: nowrap;
+  width: 100%;
+  animation: scrollFeatures 10s linear infinite;
+
   @include media(desktop) {
     gap: 56px;
   }
@@ -40,12 +42,10 @@
   padding: 24px;
   flex-direction: column;
   align-items: flex-start;
-
   flex-shrink: 0;
   border-radius: 16px;
   background: var(--Card-Background_Pink, #fddeff);
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
-  animation: scroll 5s linear infinite;
 
   @include media(desktop) {
     width: 246px;
@@ -53,12 +53,12 @@
   }
 }
 
-@keyframes scroll {
+@keyframes scrollFeatures {
   0% {
-    transform: translateX(20%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-20%);
+    transform: translateX(calc(-167px * 8 - 48px * 8));
   }
 }
 
