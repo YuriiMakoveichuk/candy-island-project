@@ -27,7 +27,6 @@
   display: flex;
   gap: 48px;
   white-space: nowrap;
-  width: 100%;
   animation: scrollFeatures 10s linear infinite;
 
   @include media(desktop) {
@@ -53,14 +52,21 @@
   }
 }
 
-@keyframes scrollFeatures {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-167px * 8 - 48px * 8));
+.test {
+  display: none;
+  @include media(desktop) {
+    display: inline-block;
   }
 }
+
+// @keyframes scrollFeatures {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   100% {
+//     transform: translateX(calc(-167px * 8 - 48px * 8));
+//   }
+// }
 
 .feature__icon-wrapper {
   margin-bottom: 16px;
