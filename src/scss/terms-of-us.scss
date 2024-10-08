@@ -16,7 +16,7 @@
   text-transform: capitalize;
   display: flex;
   align-items: center;
-  transition: color 250ms linear, fill 250ms linear;
+  transition: color 250ms ease-in-out, fill 250ms ease-in-out;
   @include media(desktop) {
     font-size: 20px;
     padding: 72px 0 28px;
@@ -33,10 +33,16 @@
 
 .terms-svg {
   margin-right: 16px;
+  transition: fill 250ms ease-in-out;
   @include media(desktop) {
     width: 24px;
     height: 24px;
   }
+}
+
+.terms-header:hover .terms-svg {
+  filter: invert(35%) sepia(65%) saturate(2000%) hue-rotate(-30deg)
+    brightness(95%) contrast(90%);
 }
 
 .terms-caption {
