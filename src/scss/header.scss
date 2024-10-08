@@ -50,10 +50,12 @@
     padding: 18px 0;
   }
 
-  &:hover,
-  &:focus {
-    color: $_hover_text_color;
-    transition: all 0.3s ease;
+  @include media(desktop) {
+    &:hover,
+    &:focus {
+      color: $_hover_text_color;
+      transition: all 0.3s ease;
+    }
   }
 }
 
@@ -118,9 +120,10 @@
   font-weight: 600;
   color: $_header_text_color;
   text-decoration: none;
-
-  &:hover {
-    color: $_hover_text_color;
+  @include media(desktop) {
+    &:hover {
+      color: $_hover_text_color;
+    }
   }
 }
 

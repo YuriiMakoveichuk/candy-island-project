@@ -41,5 +41,7 @@
 
 .nav-link-footer:hover,
 .nav-link-footer:focus {
-  color: #f15d99;
+  @include media(desktop) {
+    color: #f15d99;
+  }
 }

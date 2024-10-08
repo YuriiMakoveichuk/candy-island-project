@@ -1,18 +1,20 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/scss';
 
+let slidesPerView = 1;
+let loopedSlides = 1;
+let spaceBetween = 10;
+
 document.addEventListener('DOMContentLoaded', () => {
   const width = window.innerWidth;
-  let slidesPerView;
-  let loopedSlides = 1;
-  if (width > 320 && width < 1440) {
+
+  if (width > 370 && width < 1440) {
     slidesPerView = 2;
-  } else {
-    slidesPerView = 1;
+    spaceBetween = 25;
   }
   new Swiper('.swiper-reviews', {
     slidesPerView,
-    spaceBetween: 0,
+    spaceBetween,
     slideToClickedSlide: true,
     loop: true,
     loopedSlides,
@@ -20,12 +22,5 @@ document.addEventListener('DOMContentLoaded', () => {
       enabled: true,
       onlyInViewport: true,
     },
-    a11y: {
-      prevSlideMessage: 'Previous slide',
-      nextSlideMessage: 'Next slide',
-    },
-    // autoplay: {
-    //   delay: 1000,
-    // },
   });
 });
