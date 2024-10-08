@@ -25,8 +25,10 @@
 
 .terms-header:focus,
 .terms-header:hover {
-  color: #f15d99;
-  fill: #f15d99;
+  @include media(desktop) {
+    color: #f15d99;
+    fill: #f15d99;
+  }
 }
 
 .terms-svg {

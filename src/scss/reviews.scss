@@ -5,6 +5,10 @@
   }
 }
 
+.swiper-reviews {
+  overflow: hidden;
+}
+
 .reviews-title {
   margin-bottom: 40px;
   font-weight: 600;
@@ -24,12 +28,11 @@
   background: #fff9cd;
   border-radius: 16px;
   padding: 32px 24px;
-  margin-right: 1px;
-  margin-left: 1px;
+  overflow: hidden;
   @include media(desktop) {
     width: 550px !important;
     height: 200px !important;
-    margin-right: 12px;
+    margin-right: 8px;
     margin-left: 12px;
   }
 }
@@ -50,6 +53,9 @@
 .reviews-nickname {
   font-weight: 600;
   font-size: 16px;
+  @include media(desktop) {
+    font-size: 24px;
+  }
 }
 
 .reviews-text {

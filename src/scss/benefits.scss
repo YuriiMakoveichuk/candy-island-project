@@ -1,80 +1,61 @@
-.features {
+.benefits-section {
   padding: 112px 0 0;
-  display: flex;
-  flex-direction: column;
-
   @include media(desktop) {
     padding: 120px 0 0;
   }
 }
 
-.features__title {
+.benefits-title {
   margin-bottom: 40px;
   font-weight: 600;
   font-size: 20px;
   color: $_header_text_color;
   font-size: 20px;
-
-  font-style: normal;
-  line-height: normal;
   text-transform: capitalize;
   @include media(desktop) {
     font-size: 36px;
     margin-bottom: 64px;
   }
 }
-.featuresGrid {
+.benefits-grid {
   display: flex;
   gap: 48px;
-  white-space: nowrap;
+  // white-space: nowrap;
   animation: scrollFeatures 10s linear infinite;
-
   @include media(desktop) {
     gap: 56px;
   }
 }
 
-.feature {
-  display: inline-block;
-  width: 167px;
-  height: 161px;
-  padding: 24px;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-shrink: 0;
+.benefits-item {
+  padding: 24px 24px 32px;
   border-radius: 16px;
   background: var(--Card-Background_Pink, #fddeff);
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
-
   @include media(desktop) {
-    width: 246px;
-    height: 164px;
+    padding: 24px;
   }
 }
 
-.test {
-  display: none;
+.benefits-box {
+  width: 119px;
   @include media(desktop) {
-    display: inline-block;
+    width: 198px;
+  }
+}
+@keyframes scrollFeatures {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-167px * 8 - 48px * 4));
   }
 }
 
-// @keyframes scrollFeatures {
-//   0% {
-//     transform: translateX(0);
-//   }
-//   100% {
-//     transform: translateX(calc(-167px * 8 - 48px * 8));
-//   }
-// }
-
-.feature__icon-wrapper {
-  margin-bottom: 16px;
-}
-
-.feature__icon {
+.benefits-svg {
   width: 24px;
   height: 24px;
+  margin-bottom: 32px;
 
   @include media(desktop) {
     width: 28px;
@@ -82,18 +63,19 @@
   }
 }
 
-.feature__text h3 {
+.benefits-box-title {
   color: $_header_text_color;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  margin-bottom: 8px;
   @include media(desktop) {
     font-size: 24px;
   }
 }
 
-.feature__text p {
+.benefits-box-text {
   color: $_header_text_color;
   font-size: 12px;
   font-style: normal;
