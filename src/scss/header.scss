@@ -1,12 +1,18 @@
 .header {
-  padding: 16px 0;
   height: 104px;
-  background-color: $_header_accent_color;
+
   position: fixed;
   z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.header-box {
+  margin: 0 auto;
+  padding: 16px 0;
+  width: 1200px;
+  background-color: $_header_accent_color;
 }
 
 .container-header {
