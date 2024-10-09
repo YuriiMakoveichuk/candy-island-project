@@ -1,3 +1,13 @@
+.terms-box {
+  background: linear-gradient(
+    180deg,
+    #d2ffb1 0%,
+    #c2fffd 35%,
+    #ffc6e6 65%,
+    #c2fffd 100%
+  );
+}
+
 .terms-section:not(:last-child) {
   padding: 16px 0;
 }
@@ -40,10 +50,10 @@
   }
 }
 
-.terms-header:hover .terms-svg {
-  filter: invert(35%) sepia(65%) saturate(2000%) hue-rotate(-30deg)
-    brightness(95%) contrast(90%);
-}
+// .terms-header:hover .terms-svg {
+//   filter: invert(35%) sepia(65%) saturate(2000%) hue-rotate(-30deg)
+//     brightness(95%) contrast(90%);
+// }
 
 .terms-caption {
   font-weight: 600;
