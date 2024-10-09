@@ -17,9 +17,9 @@
 }
 
 .gallery-slide {
-  width: 136px !important;
+  width: 240px !important;
+  border-radius: 16px;
   @include media(desktop) {
-    width: 306px !important;
-    height: 542px !important;
+    width: 386px !important;
   }
 }

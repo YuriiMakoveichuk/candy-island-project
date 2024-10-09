@@ -2,6 +2,13 @@
   display: flex;
   flex-direction: column;
   padding: 112px 0 0;
+  background: linear-gradient(
+    0deg,
+    #d2ffb1 0%,
+    #c2fffd 33.5%,
+    #ffc6e6 64%,
+    #c2fffd 100%
+  );
   @include media(desktop) {
     padding: 120px 0 0;
   }
@@ -50,7 +57,15 @@
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
   width: 288px;
   height: auto;
+  background: linear-gradient(
+    0deg,
+    #d2ffb1 0%,
+    #c2fffd 33.5%,
+    #ffc6e6 64%,
+    #c2fffd 100%
+  );
   background: var(--Card-Background_Yellow, #fff9cd);
+
   // opacity: 0;
   // transform: translateX(0);
   // transition: all 1.2s ease;
