@@ -20,12 +20,13 @@
 }
 
 .terms-header {
-  padding: 32px 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-weight: 500;
   font-size: 14px;
   text-transform: capitalize;
-  display: flex;
-  align-items: center;
+  padding: 32px 0 16px 0;
   transition: color 250ms ease-in-out, fill 250ms ease-in-out;
   @include media(desktop) {
     font-size: 20px;
@@ -33,8 +34,7 @@
   }
 }
 
-.terms-header:focus,
-.terms-header:hover {
+.terms-header :hover {
   @include media(desktop) {
     color: #f15d99;
     fill: #f15d99;
@@ -42,18 +42,15 @@
 }
 
 .terms-svg {
-  margin-right: 16px;
+  margin-right: 0;
   transition: fill 250ms ease-in-out;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
   @include media(desktop) {
     width: 24px;
     height: 24px;
   }
-}
-
-
-.terms-header:hover {
-  filter: invert(35%) sepia(65%) saturate(2000%) hue-rotate(-30deg)
-    brightness(95%) contrast(90%);
 }
 
 .terms-caption {
