@@ -1,3 +1,13 @@
+.policy-box {
+  background: linear-gradient(
+    180deg,
+    #d2ffb1 0%,
+    #c2fffd 35%,
+    #ffc6e6 65%,
+    #c2fffd 100%
+  );
+}
+
 .back {
   color: $_header_text_color;
   font-size: 20px;
