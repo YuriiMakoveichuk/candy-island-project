@@ -15,7 +15,7 @@
   font-size: 16px;
   line-height: 1.5;
   color: #290c44;
-  background-color: rgb(231, 219, 194);
+  background-color: $_header_accent_color;
   height: 260vh;
 
   html,
@@ -51,7 +51,6 @@ main {
   }
 }
 .body-box {
-  width: 1200px;
   margin: 0 auto;
   background: linear-gradient(
     180deg,
@@ -60,9 +59,4 @@ main {
     #ffc6e6 65%,
     #c2fffd 100%
   );
-}
-
-.footer-box {
-  width: 1200px;
-  margin: 0 auto;
 }
