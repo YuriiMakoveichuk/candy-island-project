@@ -15,16 +15,8 @@
   font-size: 16px;
   line-height: 1.5;
   color: #290c44;
-
+  background-color: rgb(231, 219, 194);
   height: 260vh;
-
-  background: linear-gradient(
-    180deg,
-    #d2ffb1 0%,
-    #c2fffd 35%,
-    #ffc6e6 65%,
-    #c2fffd 100%
-  );
 
   html,
   body {
@@ -57,4 +49,20 @@ main {
     width: 1200px;
     padding: 0 24px;
   }
+}
+.body-box {
+  width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(
+    180deg,
+    #d2ffb1 0%,
+    #c2fffd 35%,
+    #ffc6e6 65%,
+    #c2fffd 100%
+  );
+}
+
+.footer-box {
+  width: 1200px;
+  margin: 0 auto;
 }

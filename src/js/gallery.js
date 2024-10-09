@@ -1,18 +1,16 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/scss';
 
-let loop = true;
-
 new Swiper('.mySwiper', {
   effect: 'coverflow',
-  grabCursor: true,
+  // grabCursor: true,
   centeredSlides: true,
   slidesPerView: 'auto',
-  loop,
+  loop: true,
   coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
+    rotate: 0,
+    stretch: 20,
+    depth: 300,
     modifier: 1,
     slideShadows: true,
   },
