@@ -50,10 +50,11 @@
   }
 }
 
-// .terms-header:hover .terms-svg {
-//   filter: invert(35%) sepia(65%) saturate(2000%) hue-rotate(-30deg)
-//     brightness(95%) contrast(90%);
-// }
+
+.terms-header:hover {
+  filter: invert(35%) sepia(65%) saturate(2000%) hue-rotate(-30deg)
+    brightness(95%) contrast(90%);
+}
 
 .terms-caption {
   font-weight: 600;
