@@ -1,26 +1,20 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/scss';
 
-let slidesPerView = 1;
-let loopedSlides = 1;
-let spaceBetween = 10;
-
-document.addEventListener('DOMContentLoaded', () => {
-  const width = window.innerWidth;
-
-  if (width > 370 && width < 1440) {
-    slidesPerView = 2;
-    spaceBetween = 25;
-  }
-  new Swiper('.swiper-reviews', {
-    slidesPerView,
-    spaceBetween,
-    slideToClickedSlide: true,
-    loop: true,
-    loopedSlides,
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true,
+new Swiper('.swiper-reviews', {
+  slidesPerView: 'auto',
+  navigation: {
+    nextEl: '.btn-go-right',
+    prevEl: '.btn-go-left',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 16,
     },
-  });
+    1100: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+  },
 });
