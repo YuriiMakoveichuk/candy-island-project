@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candy Island</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <script type="module" crossorigin src="/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-fa94e50b.js">
+    <link rel="stylesheet" href="/assets/vendor-83dc70da.css">
+    <link rel="stylesheet" href="/assets/styles-6b029afc.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="container-header">
+    <a href="#">
+      <img
+        class="icon-logo"
+        src="data:image/png;base64,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"
+        srcset="data:image/png;base64,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 1x, /assets/Logo@2x-c9ea1596.png 2x"
+        alt="Logo"
+        width="72"
+        height="72"
+      />
+    </a>
+    <nav>
+      <ul class="nav-link">
+        <li><a href="#home" class="link">Home</a></li>
+        <li><a href="#advantages" class="link">Advantages</a></li>
+        <li><a href="#benefits" class="link">Benefits</a></li>
+        <li><a href="#reviews" class="link">Reviews</a></li>
+        <li><a href="#aboutus" class="link">About us</a></li>
+        <li><a href="#gallery" class="link">Gallery</a></li>
+      </ul>
+    </nav>
+    <button class="burger-btn">
+      <svg class="icon-burger">
+        <use href="/assets/sprite-fbc70101.svg#icon-Burger"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+<div class="mobile-content">
+  <div class="container-mobile">
+    <button class="close-btn">
+      <svg class="icon-close">
+        <use href="/assets/sprite-fbc70101.svg#icon-X"></use>
+      </svg>
+    </button>
+    <nav class="nav-link-mobile">
+      <ul class="nav-mobile-list">
+        <li><a href="#home" class="link js-link">Home</a></li>
+        <li><a href="#advantages" class="link js-link">Advantages</a></li>
+        <li><a href="#benefits" class="link js-link">Benefits</a></li>
+        <li><a href="#reviews" class="link js-link">Reviews</a></li>
+        <li><a href="#aboutus" class="link js-link">About us</a></li>
+        <li><a href="#gallery" class="link js-link">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+    <main>
+      <section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="title-button-wrapper">
+      <div class="title-button-wrapper">
+        <h1 class="hero-title-outline">Candy Island</h1>
+        <h1 class="hero-title-fill">Candy Island</h1>
+      </div>
+      <h2 class="hero-text">
+        Sail Through Sweet Puzzles <br class="mobile-br" />
+        And Explore <br class="desktop-br" />
+        Candy-Filled <br class="mobile-br" />
+        Lands!
+      </h2>
+      <a
+        href="https://play.google.com/store/apps/details?id=com.zymobile.candy.island.sweet"
+        class="hero-button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="data:image/png;base64,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"
+          alt="Get it on Google Play"
+          class="google-play-icon"
+        />
+      </a>
+    </div>
+  </div>
+</section>
+
+      <section class="advantages" id="advantages">
+  <div class="container advantages-container">
+    <h2 class="titleContainer">Advantages</h2>
+    <div class="itemsContainer">
+      <div class="advantage-item left-column">
+        <div class="text-content">
+          <p>
+            Immerse yourself in colorful candy-filled islands with stunning
+            visuals.
+          </p>
+          <h3><span class="number">01</span> Vibrant Graphics</h3>
+        </div>
+      </div>
+
+      <div class="advantage-item right-column">
+        <div class="text-content">
+          <p>From easy to expert, play through hundreds of unique levels.</p>
+          <h3><span class="number">02</span> Variety of Levels</h3>
+        </div>
+      </div>
+
+      <div class="advantage-item left-column">
+        <div class="text-content">
+          <p>
+            Use power-ups and boosters to clear the board and conquer levels.
+          </p>
+          <h3><span class="number">03</span> Strategic Boosters</h3>
+        </div>
+      </div>
+
+      <div class="advantage-item right-column">
+        <div class="text-content">
+          <p>
+            New obstacles and puzzle mechanics introduced in each new chapter.
+          </p>
+          <h3><span class="number">04</span> Engaging Gameplay</h3>
+        </div>
+      </div>
+
+      <div class="advantage-item left-column">
+        <div class="text-content">
+          <p>
+            Take the sweet adventure with you anywhere, even without an internet
+            connection.
+          </p>
+          <h3><span class="number">05</span> Offline Play</h3>
+        </div>
+        <!-- <div class="iconContainer">
+          <img
+            class="icon"
+            src="./public/img/advantages-img/Offline Play_Vector.png"
+            alt="Offline Play"
+            width="113"
+            height="113"
+          />
+        </div> -->
+      </div>
+
+      <div class="advantage-item right-column">
+        <div class="text-content">
+          <p>Enjoy special events and rewards during holiday-themed levels.</p>
+          <h3><span class="number">06</span> Seasonal Updates</h3>
+        </div>
+        <!-- <div class="iconContainer">
+          <img
+            class="icon"
+            src="./public/img/advantages-img/Seasonal Updates_Vector.png"
+            alt="Seasonal Updates"
+            width="112"
+            height="107"
+          />
+        </div> -->
+      </div>
+
+      <div class="advantage-item left-column">
+        <div class="text-content">
+          <p>
+            Great for casual gamers but with enough challenge to satisfy pros.
+          </p>
+          <h3><span class="number">07</span> Adaptive Difficulty</h3>
+        </div>
+        <!-- <div class="iconContainer">
+          <img
+            class="icon"
+            src="./public/img/advantages-img/Adaptive Difficulty_Vector.png"
+            alt="Adaptive Difficulty"
+            width="105"
+            height="115"
+          />
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+      <div class="body-box">
+        <section class="benefits-section" id="benefits">
+  <div class="container">
+    <h2 class="benefits-title">Benefits</h2>
+
+    <div class="benefits-marquee">
+      <ul class="benefits-grid">
+        <div class="marquee-box">
+          <li class="benefits-item">
+            <svg class="benefits-svg">
+              <use href="/assets/sprite-fbc70101.svg#icon-Star"></use>
+            </svg>
+            <div class="benefits-box">
+              <h3 class="benefits-box-title">Star Rating</h3>
+              <p class="benefits-box-text">4.9</p>
+            </div>
+          </li>
+
+          <li class="benefits-item">
+            <svg class="benefits-svg">
+              <use href="/assets/sprite-fbc70101.svg#icon-Export"></use>
+            </svg>
+            <div class="benefits-box">
+              <h3 class="benefits-box-title">Downloads</h3>
+              <p class="benefits-box-text">Over 2 Million</p>
+            </div>
+          </li>
+
+          <li class="benefits-item">
+            <svg class="benefits-svg">
+              <use href="/assets/sprite-fbc70101.svg#icon-ThumbsUp"></use>
+            </svg>
+            <div class="benefits-box">
+              <h3 class="benefits-box-title">Positive Reviews</h3>
+              <p class="benefits-box-text">50,000+</p>
+            </div>
+          </li>
+
+          <li class="benefits-item">
+            <svg class="benefits-svg">
+              <use href="/assets/sprite-fbc70101.svg#icon-WifiSlash"></use>
+            </svg>
+            <div class="benefits-box">
+              <h3 class="benefits-box-title">Offline Mode</h3>
+              <p class="benefits-box-text">Both online and offline</p>
+            </div>
+          </li>
+        </div>
+
+        <div class="marquee-box">
+          <li class="benefits-item">
+            <svg class="benefits-svg">
+              <use href="/assets/sprite-fbc70101.svg#icon-Star"></use>
+            </svg>
+
+            <div class="benefits-box">
+              <h3 class="benefits-box-title">Star Rating</h3>
+              <p class="benefits-box-text">4.9</p>
+            </div>
+          </li>
+
+          <li class="benefits-item">
+            <svg class="benefits-svg">
+              <use href="/assets/sprite-fbc70101.svg#icon-Export"></use>
+            </svg>
+            <div class="benefits-box">
+              <h3 class="benefits-box-title">Downloads</h3>
+              <p class="benefits-box-text">Over 2 Million</p>
+            </div>
+          </li>
+
+          <li class="benefits-item">
+            <svg class="benefits-svg">
+              <use href="/assets/sprite-fbc70101.svg#icon-ThumbsUp"></use>
+            </svg>
+            <div class="benefits-box">
+              <h3 class="benefits-box-title">Positive Reviews</h3>
+              <p class="benefits-box-text">50,000+</p>
+            </div>
+          </li>
+
+          <li class="benefits-item">
+            <svg class="benefits-svg">
+              <use href="/assets/sprite-fbc70101.svg#icon-WifiSlash"></use>
+            </svg>
+            <div class="benefits-box">
+              <h3 class="benefits-box-title">Offline Mode</h3>
+              <p class="benefits-box-text">Both online and offline</p>
+            </div>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</section>
+
+        <section class="reviews-section" id="reviews">
+  <div class="container">
+    <h2 class="reviews-title">Reviews</h2>
+    <div class="swiper-reviews swiper">
+      <ul class="swiper-wrapper">
+        <li class="slide-reviews swiper-slide">
+          <div class="reviews-box">
+            <img
+              class="reviews-img"
+              src="/assets/Frame-58-ac3cf66f.png"
+              srcset="/assets/Frame-58-ac3cf66f.png 1x, /assets/Frame-58@2x-40472c46.png 2x"
+              alt="SweetToothGamer"
+            />
+            <h4 class="reviews-nickname">SweetToothGamer</h4>
+          </div>
+          <p class="reviews-text">
+            Absolutely love the graphics and the endless levels. It’s my go-to
+            game!
+          </p>
+        </li>
+        <li class="slide-reviews swiper-slide">
+          <div class="reviews-box">
+            <img
+              class="reviews-img"
+              src="/assets/Frame-61-ff80fd16.png"
+              srcset="/assets/Frame-61-ff80fd16.png 1x, /assets/Frame-61@2x-f87b36a8.png 2x"
+              alt="Photo of PuzzleChampion"
+            />
+            <h4 class="reviews-nickname">PuzzleChampion</h4>
+          </div>
+          <p class="reviews-text">
+            The puzzles keep getting better and harder! Perfect for killing
+            time.
+          </p>
+        </li>
+        <li class="slide-reviews swiper-slide">
+          <div class="reviews-box">
+            <img
+              class="reviews-img"
+              src="/assets/Frame-59-8a84e79f.png"
+              srcset="/assets/Frame-59-8a84e79f.png 1x, /assets/Frame-59@2x-6efe778a.png 2x"
+              alt="Photo of CandyLover89"
+            />
+            <h4 class="reviews-nickname">CandyLover89</h4>
+          </div>
+          <p class="reviews-text">
+            Great for relaxing after work. The designs are cute, and the
+            challenges keep me hooked.
+          </p>
+        </li>
+        <li class="slide-reviews swiper-slide">
+          <div class="reviews-box">
+            <img
+              class="reviews-img"
+              src="/assets/Frame-65-81d0b20f.png"
+              srcset="/assets/Frame-65-81d0b20f.png 1x, /assets/Frame-65@2x-aaa22254.png 2x"
+              alt="Photo of BoostMaster"
+            />
+            <h4 class="reviews-nickname">BoostMaster</h4>
+          </div>
+          <p class="reviews-text">
+            The boosters are fantastic, and the events are always fun to join.
+          </p>
+        </li>
+        <li class="slide-reviews swiper-slide">
+          <div class="reviews-box">
+            <img
+              class="reviews-img"
+              src="/assets/Frame-66-920bc928.png"
+              srcset="/assets/Frame-66-920bc928.png 1x, /assets/Frame-66@2x-16e25175.png 2x"
+              alt="Photo of SugarCrushKing"
+            />
+            <h4 class="reviews-nickname">SugarCrushKing</h4>
+          </div>
+          <p class="reviews-text">
+            Can’t stop playing! The levels get more creative the further you go.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+        <section class="about-us-section" id="aboutus">
+  <div class="container about-us-container">
+    <div class="about-us-box">
+      <h2 class="about-us-title">About us</h2>
+      <p class="about-us-text">
+        Candy Island takes you on a whimsical journey through candy-themed
+        islands, filled with sweet puzzles and exciting challenges. Match
+        candies, solve puzzles, and unlock boosters as you explore each unique
+        level. Designed for players of all ages, this addictive match-3 game
+        offers hours of fun with hundreds of levels and regular updates.
+      </p>
+    </div>
+    <picture>
+      <source
+        srcset="/assets/mobiles-e3fcf8f3.png 1x, /assets/mobiles@2x-59d321b4.png 2x"
+        media="(min-width: 1100px)"
+      />
+      <source
+        srcset="/assets/mobilesMob-740593b9.png 1x, /assets/mobilesMob@2x-9a5b975e.png 2x"
+        media="(max-width: 767px)"
+      />
+      <img
+        class="about-us-img"
+        src="/assets/mobilesMob-740593b9.png"
+        alt="Photo of mobile"
+      />
+    </picture>
+  </div>
+</section>
+
+        <section class="gallery-section" id="gallery">
+  <div class="container">
+    <h2 class="gallery-title">Gallery</h2>
+
+    <div class="swiper mySwiper swiper-gallery">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide gallery-slide">
+          <img
+            src="/assets/free-bec2bebe.png"
+            srcset="/assets/free-bec2bebe.png 1x, /assets/free@2x-d1111fb5.png 2x"
+            alt="Photo games"
+          />
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img
+            src="/assets/island-1ce2e263.png"
+            srcset="/assets/island-1ce2e263.png 1x, /assets/island@2x-c1faccb5.png 2x"
+            alt="Photo games"
+          />
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img
+            src="/assets/gain-ea56809b.png"
+            srcset="/assets/gain-ea56809b.png 1x, /assets/gain@2x-0c69e447.png 2x"
+            alt="Photo games"
+          />
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img
+            src="/assets/over-d7fde823.png"
+            srcset="/assets/over-d7fde823.png 1x, /assets/over@2x-b695865c.png 2x"
+            alt="Photo games"
+          />
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img
+            src="/assets/special-1f31f019.png"
+            srcset="/assets/special-1f31f019.png 1x, /assets/special@2x-30895e12.png 2x"
+            alt="Photo games"
+          />
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img
+            src="/assets/free-bec2bebe.png"
+            srcset="/assets/free-bec2bebe.png 1x, /assets/free@2x-d1111fb5.png 2x"
+            alt="Photo games"
+          />
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img
+            src="/assets/island-1ce2e263.png"
+            srcset="/assets/island-1ce2e263.png 1x, /assets/island@2x-c1faccb5.png 2x"
+            alt="Photo games"
+          />
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img
+            src="/assets/gain-ea56809b.png"
+            srcset="/assets/gain-ea56809b.png 1x, /assets/gain@2x-0c69e447.png 2x"
+            alt="Photo games"
+          />
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img
+            src="/assets/over-d7fde823.png"
+            srcset="/assets/over-d7fde823.png 1x, /assets/over@2x-b695865c.png 2x"
+            alt="Photo games"
+          />
+        </div>
+        <div class="swiper-slide gallery-slide">
+          <img
+            src="/assets/special-1f31f019.png"
+            srcset="/assets/special-1f31f019.png 1x, /assets/special@2x-30895e12.png 2x"
+            alt="Photo games"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      </div>
+    </main>
+
+    <div class="footer-box">
+      <footer class="footer">
+  <div class="container container-footer">
+    <nav class="nav-footer">
+      <ul class="nav-list-footer">
+        <li class="nav-item-footer">
+          <a href="./privacy-policy.html" class="nav-link-footer"
+            >Privacy Policy</a
+          >
+        </li>
+        <li class="nav-item-footer">
+          <a href="./terms-of-us.html" class="nav-link-footer">
+            Terms and Conditions</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="text-footer">©2024 JoyEpicWin.com, All rights reserved.</div>
+  </div>
+</footer>
+
+    </div>
+
+    
+  </body>
+</html>
