@@ -27,8 +27,8 @@
     height: 984px;
     padding: 120px 0 0;
     background-image: url('/img/hero-img/mainVectorDesktop.png');
-    background-size: 100%;
-    background-position: 88% 0%;
+    background-size: 98%;
+    background-position: 88% -450%;
   }
 }
 
@@ -111,12 +111,21 @@
 
 .hero-button {
   display: inline-block;
+  width: 109px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   margin-top: 8px;
+  transition: transform 520ms ease-in-out, border-radius 520ms ease-in-out;
+
   content: url('/public/img/hero-img/mainButtonMob.svg');
 
   @include media(desktop) {
+    width: 180px;
     margin-top: 16px;
+    height: auto;
     animation: hoverAnimation 320s infinite linear;
+    transform: scale(1);
     content: url('/public/img/hero-img/mainButton.svg');
   }
 }
@@ -131,11 +140,13 @@
   }
 }
 
-.hero-button:hover {
+.hero-button:hover,
+.hero-button:focus {
   @include media(desktop) {
-    content: url('/public/img/hero-img/mainButtonHover.png');
-    width: 198.4px;
-    height: auto;
+    transform: scale(1.2);
+
+    border-radius: 8px;
+    outline: 3px solid #f15d99;
   }
 }
 
