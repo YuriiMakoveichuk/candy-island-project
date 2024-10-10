@@ -42,8 +42,10 @@
 }
 
 .terms-header:hover {
-  filter: invert(30%) sepia(50%) saturate(1000%) hue-rotate(-30deg)
-    brightness(130%) contrast(90%);
+  @include media(desktop) {
+    filter: invert(30%) sepia(50%) saturate(1000%) hue-rotate(-30deg)
+      brightness(130%) contrast(90%);
+  }
 }
 .privacy-policy {
   color: $_header_text_color;
