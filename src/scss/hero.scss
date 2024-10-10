@@ -16,9 +16,9 @@
   max-width: 320px;
   height: 488px;
   background-image: url('/img/hero-img/mainVectorDesktop.png');
-  background-position: 47% -50%;
+  background-position: 56% -60%;
   background-repeat: no-repeat;
-  background-size: 240%;
+  background-size: 210%;
   background-color: #c2fffd;
 
   @include media(desktop) {
@@ -27,8 +27,8 @@
     height: 984px;
     padding: 120px 0 0;
     background-image: url('/img/hero-img/mainVectorDesktop.png');
-    background-size: 130%;
-    background-position: 38% 0%;
+    background-size: 104%;
+    background-position: 88% 0%;
   }
 }
 
@@ -112,10 +112,10 @@
 .hero-button {
   display: inline-block;
   margin-top: 8px;
-  transition: all 0.5s ease-in-out;
 
   @include media(desktop) {
     margin-top: 16px;
+    transition: all 5s ease-in-out;
   }
 }
 
