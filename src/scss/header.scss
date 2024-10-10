@@ -84,7 +84,13 @@
   color: #fbfbfb;
   padding-top: 56px;
   padding-bottom: 54px;
-  background: linear-gradient(180deg, #d2ffb1 0%, #ffc6e6 65%);
+  background: linear-gradient(
+    0deg,
+    #d2ffb1 0%,
+    #c2fffd 33.5%,
+    #ffc6e6 64%,
+    #c2fffd 100%
+  );
   z-index: 10000;
 }
 
@@ -96,8 +102,9 @@
 
 .container-mobile {
   max-width: 320px;
-  padding: 0 16px;
+  padding: 0 32px;
   position: relative;
+  margin: 0 auto;
 }
 
 .nav-link-mobile {
@@ -138,7 +145,7 @@
   z-index: 10000;
   cursor: pointer;
   position: absolute;
-  top: 0;
+  top: -16px;
   right: 24px;
 
   @include media(desktop) {
