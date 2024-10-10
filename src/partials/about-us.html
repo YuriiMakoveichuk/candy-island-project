@@ -1,35 +1,37 @@
 <section class="about-us-section" id="aboutus">
-  <div class="container about-us-container">
-    <div class="about-us-box">
-      <h2 class="about-us-title">About us</h2>
-      <p class="about-us-text">
-        Candy Island takes you on a whimsical journey through candy-themed
-        islands, filled with sweet puzzles and exciting challenges. Match
-        candies, solve puzzles, and unlock boosters as you explore each unique
-        level. Designed for players of all ages, this addictive match-3 game
-        offers hours of fun with hundreds of levels and regular updates.
-      </p>
+  <div class="container">
+    <div class="about-us-container">
+      <div class="about-us-box">
+        <h2 class="about-us-title">About us</h2>
+        <p class="about-us-text">
+          Candy Island takes you on a whimsical journey through candy-themed
+          islands, filled with sweet puzzles and exciting challenges. Match
+          candies, solve puzzles, and unlock boosters as you explore each unique
+          level. Designed for players of all ages, this addictive match-3 game
+          offers hours of fun with hundreds of levels and regular updates.
+        </p>
+      </div>
+      <picture>
+        <source
+          srcset="
+            ./public/img/about-us-img/mobiles.png    1x,
+            ./public/img/about-us-img/mobiles@2x.png 2x
+          "
+          media="(min-width: 1100px)"
+        />
+        <source
+          srcset="
+            ./public/img/about-us-img/mobilesMob.png    1x,
+            ./public/img/about-us-img/mobilesMob@2x.png 2x
+          "
+          media="(max-width: 767px)"
+        />
+        <img
+          class="about-us-img"
+          src="./public/img/about-us-img/mobilesMob.png"
+          alt="Photo of mobile"
+        />
+      </picture>
     </div>
-    <picture>
-      <source
-        srcset="
-          ./public/img/about-us-img/mobiles.png    1x,
-          ./public/img/about-us-img/mobiles@2x.png 2x
-        "
-        media="(min-width: 1100px)"
-      />
-      <source
-        srcset="
-          ./public/img/about-us-img/mobilesMob.png    1x,
-          ./public/img/about-us-img/mobilesMob@2x.png 2x
-        "
-        media="(max-width: 767px)"
-      />
-      <img
-        class="about-us-img"
-        src="./public/img/about-us-img/mobilesMob.png"
-        alt="Photo of mobile"
-      />
-    </picture>
   </div>
 </section>

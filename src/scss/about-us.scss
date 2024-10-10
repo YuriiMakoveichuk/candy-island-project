@@ -12,15 +12,15 @@
   text-transform: capitalize;
   @include media(desktop) {
     font-size: 36px;
-    margin-bottom: 48px;
+    margin-bottom: 64px;
   }
 }
 
 .about-us-container {
-  background-image: url(/public/img/about-us-img/Puzzles_Mobile.png);
+  background-image: url(/public/img/about-us-img/Puzzles_Mobile.svg);
   background-repeat: no-repeat;
   @include media(desktop) {
-    background-image: url(/public/img/about-us-img/Puzzles_Desk.png);
+    background-image: url(/public/img/about-us-img/Puzzles_Desk.svg);
     display: flex;
   }
 }
@@ -40,16 +40,3 @@
     width: 468px;
   }
 }
-
-// @media only screen and (min-width: 1200px) and (min-resolution: 192dpi),
-//   only screen and (min-width: 1200px) and (min-device-pixel-ratio: 2) {
-//   .about-us-container {
-//     background-image: url(/public/img/about-us-img/Puzzles_Desk@2x.png);
-//   }
-// }
-
-// @media only screen and (max-width: 768px) and (min-resolution: 192dpi) {
-//   .about-us-container {
-//     background-image: url(/public/img/about-us-img/Puzzles_Mobile@2x.png);
-//   }
-// }
