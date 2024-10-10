@@ -8,38 +8,19 @@
   );
 }
 
-// .terms-header {
-//   padding: 32px 0 16px 0;
-//   font-weight: 500;
-//   font-size: 14px;
-//   text-transform: capitalize;
-//   display: flex;
-//   align-items: center;
-//   transition: color 250ms ease-in-out, fill 250ms ease-in-out;
-//   @include media(desktop) {
-//     font-size: 20px;
-//     padding: 72px 0 28px;
-//   }
-// }
+.policy-section:not(:last-child) {
+  padding: 16px 0;
+  @include media(desktop) {
+    padding: 32px 0;
+  }
+}
 
-// .terms-header:focus,
-// .terms-header:hover {
-//   @include media(desktop) {
-//     color: #f15d99;
-//     fill: #f15d99;
-//   }
-// }
-
-// .terms-svg {
-//   margin-right: 16px;
-//   transition: fill 250ms ease-in-out;
-//   width: 20px;
-//   height: 20px;
-//   @include media(desktop) {
-//     width: 24px;
-//     height: 24px;
-//   }
-// }
+.policy-section:last-child {
+  padding: 16px 0 56px;
+  @include media(desktop) {
+    padding: 16px 0 96px;
+  }
+}
 
 .privacy-policy {
   color: $_header_text_color;
@@ -54,15 +35,7 @@
   }
 }
 
-.marketing-section {
-  padding: 16px 0;
-}
-
-.marketing-section {
-  margin-bottom: 32px;
-}
-
-.marketing-title {
+.policy-title {
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -71,52 +44,21 @@
   margin-bottom: 24px;
   color: $_header_text_color;
   @include media(desktop) {
+    margin-bottom: 16px;
     font-size: 32px;
   }
 }
 
-.marketing-text-section {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.protections-right {
-  margin-bottom: 32px;
-}
-
-.terms-title {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  text-transform: capitalize;
+.policy-section p:not(:last-child) {
   margin-bottom: 24px;
-  color: $_header_text_color;
   @include media(desktop) {
-    font-size: 32px;
+    margin-bottom: 16px;
   }
 }
 
-.protection-right-text {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.changes-section {
-  padding-bottom: 96px;
-}
-
-.changes-title {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  text-transform: capitalize;
-  color: $_header_text_color;
-  margin-bottom: 24px;
+.policy-section p {
+  font-size: 12px;
   @include media(desktop) {
-    font-size: 32px;
+    font-size: 16px;
   }
 }
