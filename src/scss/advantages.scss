@@ -33,7 +33,7 @@
   @include media(desktop) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // grid-template-rows: auto auto auto;
+
     width: 100%;
     gap: 24px;
   }
@@ -49,38 +49,31 @@
     margin-top: 240px;
   }
 }
+
 .advantage-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
   padding: 24px;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
   width: 288px;
-  height: auto;
-  background: linear-gradient(
-    0deg,
-    #d2ffb1 0%,
-    #c2fffd 33.5%,
-    #ffc6e6 64%,
-    #c2fffd 100%
-  );
   background: var(--Card-Background_Yellow, #fff9cd);
-
-  // opacity: 0;
-  // transform: translateX(0);
-  // transition: all 1.2s ease;
 
   @include media(desktop) {
     width: 516px;
     height: 208px;
   }
 
-  &.left-column {
-    // transform: translateX(-100%);
-  }
-
-  &.right-column {
-    // transform: translateX(100%);
+  &::before {
+    content: '';
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+    right: 0;
+    top: 0;
   }
 
   &.visible.left-column {
@@ -94,99 +87,101 @@
   }
 }
 
-// @keyframes slideInLeft {
-//   0% {
-//     transform: translateX(-100%);
-//     opacity: 0;
-//   }
-//   100% {
-//     transform: translateX(0);
-//     opacity: 1;
-//   }
-// }
-
-// @keyframes slideInRight {
-//   0% {
-//     transform: translateX(100%);
-//     opacity: 0;
-//   }
-//   100% {
-//     transform: translateX(0);
-//     opacity: 1;
-//   }
-// }
-
-.iconContainer {
-  position: relative;
-}
-
-.icon {
-  position: absolute;
-  right: 0;
-  width: auto;
-  height: auto;
-}
-
-.advantage-item:nth-child(1) .icon {
-  content: url('/public/img/advantages-img/Vibrant Graphics_VectorMob.png');
-  transform: translate(20px, -10px);
+.advantage-item:nth-child(1)::before {
+  background-image: url('/public/img/advantages-img/svg/Vibrant Graphics_VectorMob.svg');
+  width: 75px;
+  height: 43px;
+  transform: translate(0px, 122px);
 
   @include media(desktop) {
-    content: url('/public/img/advantages-img/Vibrant\ Graphics_Vector.png');
-    transform: translate(50px, -70px);
-  }
-}
-.advantage-item:nth-child(2) .icon {
-  content: url('/public/img/advantages-img/Variety\ of\ Levels_VectorMob.png');
-  transform: translate(10px, -22px);
-  @include media(desktop) {
-    content: url('/public/img/advantages-img/Variety\ of\ Levels_Vector.png');
-    transform: translate(-2px, -79px);
+    background-image: url('/public/img/advantages-img/svg/Vibrant Graphics_Vector.svg');
+    width: 234px;
+    height: 139px;
+    transform: translate(68px, 130px);
   }
 }
 
-.advantage-item:nth-child(3) .icon {
-  content: url('/public/img/advantages-img/Strategic\ Boosters_VectorMob.png');
-  transform: translate(8px, -12px);
+.advantage-item:nth-child(2)::before {
+  background-image: url('/public/img/advantages-img/svg/Variety of Levels_VectorMob.svg');
+  width: 56px;
+  height: 68px;
+  transform: translate(-8px, 112px);
+
   @include media(desktop) {
-    content: url('/public/img/advantages-img/Strategic\ Boosters_Vector.png');
-    transform: translate(-2px, -49px);
+    background-image: url('/public/img/advantages-img/svg/Variety of Levels_Vector.svg');
+    width: 129px;
+    height: 158px;
+    transform: translate(-22px, 112px);
   }
 }
 
-.advantage-item:nth-child(4) .icon {
-  content: url('/public/img/advantages-img/Engaging\ Gameplay_VectorMob.png');
-  transform: translate(24px, -12px);
+.advantage-item:nth-child(3)::before {
+  background-image: url('/public/img/advantages-img/svg/Strategic Boosters_VectorMob.svg');
+  width: 60px;
+  height: 53px;
+  transform: translate(-10px, 128px);
+
   @include media(desktop) {
-    content: url('/public/img/advantages-img/Engaging\ Gameplay_Vector.png');
-    transform: translate(38px, -69px);
+    background-image: url('/public/img/advantages-img/svg/Strategic Boosters_Vector.svg');
+    width: 135px;
+    height: 110px;
+    transform: translate(-14px, 149px);
   }
 }
 
-.advantage-item:nth-child(5) .icon {
-  content: url('/public/img/advantages-img/Offline\ Play_VectorMob.png');
-  transform: translate(14px, -34px);
+.advantage-item:nth-child(4)::before {
+  background-image: url('/public/img/advantages-img/svg/Engaging Gameplay_VectorMob.svg');
+  width: 62px;
+  height: 47px;
+  transform: translate(4px, 125px);
+
   @include media(desktop) {
-    content: url('/public/img/advantages-img/Offline\ Play_Vector.png');
-    transform: translate(1px, -69px);
+    background-image: url('/public/img/advantages-img/svg/Engaging Gameplay_Vector.svg');
+    width: 164px;
+    height: 135px;
+    transform: translate(20px, 139px);
   }
 }
 
-.advantage-item:nth-child(6) .icon {
-  content: url('/public/img/advantages-img/Seasonal\ Updates_VectorMob.png');
-  transform: translate(18px, -14px);
+.advantage-item:nth-child(5)::before {
+  background-image: url('/public/img/advantages-img/svg/Offline Play_VectorMob.svg');
+  width: 62px;
+  height: 47px;
+  transform: translate(8px, 126px);
+
   @include media(desktop) {
-    content: url('/public/img/advantages-img/Seasonal\ Updates_Vector.png');
-    transform: translate(3px, -37px);
+    background-image: url('/public/img/advantages-img/svg/Offline Play_Vector.svg');
+    width: 113px;
+    height: 113px;
+    transform: translate(-18px, 129px);
   }
 }
 
-.advantage-item:nth-child(7) .icon {
-  content: url('/public/img/advantages-img/Vibrant\ Graphics_PuzzleMob.png');
-  transform: translate(14px, -18px);
+.advantage-item:nth-child(6)::before {
+  background-image: url('/public/img/advantages-img/svg/Seasonal Updates_VectorMob.svg');
+  width: 57px;
+  height: 57px;
+  transform: translate(-6px, 122px);
+
   @include media(desktop) {
-    content: url('/public/img/advantages-img/Adaptive\ Difficulty_Vector.png');
-    transform: translate(15px, -70px);
+    background-image: url('/public/img/advantages-img/svg/Seasonal Updates_Vector.svg');
+    width: 122px;
+    height: 117px;
+    transform: translate(-15px, 152px);
+  }
+}
+
+.advantage-item:nth-child(7)::before {
+  background-image: url('/public/img/advantages-img/svg/Adaptive Difficulty_VectorMob.svg');
+  width: 54px;
+  height: 52px;
+  transform: translate(-2px, 124px);
+
+  @include media(desktop) {
+    background-image: url('/public/img/advantages-img/svg/Adaptive Difficulty_Vector.svg');
+    width: 155px;
+    height: 150px;
+    transform: translate(5px, 133px);
   }
 }
 
