@@ -16,7 +16,7 @@
   max-width: 320px;
   height: 488px;
   background-image: url('/img/hero-img/mainVectorDesktop.png');
-  background-position: 56% -60%;
+  background-position: 48% -48%;
   background-repeat: no-repeat;
   background-size: 210%;
   background-color: #c2fffd;
@@ -27,7 +27,7 @@
     height: 984px;
     padding: 120px 0 0;
     background-image: url('/img/hero-img/mainVectorDesktop.png');
-    background-size: 104%;
+    background-size: 100%;
     background-position: 88% 0%;
   }
 }
@@ -112,10 +112,12 @@
 .hero-button {
   display: inline-block;
   margin-top: 8px;
+  content: url('/public/img/hero-img/mainButtonMob.svg');
 
   @include media(desktop) {
     margin-top: 16px;
-    transition: all 5s ease-in-out;
+    animation: hoverAnimation 320s infinite linear;
+    content: url('/public/img/hero-img/mainButton.svg');
   }
 }
 
@@ -132,7 +134,6 @@
 .hero-button:hover {
   @include media(desktop) {
     content: url('/public/img/hero-img/mainButtonHover.png');
-    animation: hoverAnimation 320s infinite linear;
     width: 198.4px;
     height: auto;
   }
