@@ -22,7 +22,6 @@
 .terms-header {
   display: flex;
   align-items: center;
-  gap: 8px;
   font-weight: 500;
   font-size: 14px;
   text-transform: capitalize;
@@ -34,15 +33,15 @@
   }
 }
 
-.terms-header :hover {
+.terms-header:hover {
   @include media(desktop) {
-    color: #f15d99;
-    fill: #f15d99;
+    filter: invert(30%) sepia(50%) saturate(1000%) hue-rotate(-30deg)
+      brightness(130%) contrast(90%);
   }
 }
 
 .terms-svg {
-  margin-right: 0;
+  margin-right: 16px;
   transition: fill 250ms ease-in-out;
   width: 20px;
   height: 20px;
